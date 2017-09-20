@@ -21,5 +21,5 @@ app.use('/app',function(req,res,next){
 });
 app.use('*',express.static(path.join(__dirname, '/../client')));
 
-http.listen(80);
+http.listen(1111);
 console.log('Magic happens at localhost:1111');
