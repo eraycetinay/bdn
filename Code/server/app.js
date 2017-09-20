@@ -12,8 +12,8 @@ mongoose.connect('mongodb://erayadmin:erayadmin@ds143754.mlab.com:43754/blooddon
  
 require('./blooddonor/socket.router.js')(io);
 
-app.use('/assets',function(req,res,next){ 
-	console.log(req.originalUrl);
+app.use('/assets',function(req,res,next){  
+	console.log(path.join(__dirname, '/../client'+req.originalUrl));
 	res.sendFile(path.join(__dirname, '/../client'+req.originalUrl));
 });
 app.use('/app',function(req,res,next){ 
