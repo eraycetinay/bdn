@@ -1,0 +1,60 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content"> 
+            <form name="newDonationForm" ng-submit="newDonation(newDonationForm)" novalidate>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" ng-model="newDonor.firstName" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
+                                <span class="text-danger" ng-show="newDonationForm.firstName.$invalid && newDonationForm.$submitted">Please enter your first name.</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" ng-model="newDonor.lastName" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required>
+                                <span class="text-danger" ng-show="newDonationForm.lastName.$invalid && newDonationForm.$submitted">Please enter your last name.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="contactNumber">Contact Numbera</label>
+                                <input type="tel" ng-model="newDonor.contactNumber" class="form-control" name="contactNumber" id="contactNumber" placeholder="Contact Number" mask="(99)999-9999-999" mask-restrict='reject'    required>
+                                <span class="text-danger" ng-show="newDonationForm.contactNumber.$invalid && newDonationForm.$submitted">Please enter a contact number.</span>
+                            </div> 
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" ng-model="newDonor.email" class="form-control" name="email" id="email" placeholder="Email" required>
+                                <span class="text-danger" ng-show="newDonationForm.email.$invalid && newDonationForm.$submitted">Please enter an email.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" ng-model="newDonor.address" ng-disabled="1" class="form-control" name="address" id="address" placeholder="Address"> 
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="bloodGroup">Blood Group</label>
+                                <select ng-model="newDonor.bloodGroup" class="form-control" name="bloodGroup" id="bloodGroup" ng-options="option for option in bloodTypes"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

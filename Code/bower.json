@@ -1,0 +1,31 @@
+{
+  "name": "myblooddonor",
+  "description": "single page blood donation management system",
+  "main": "",
+  "authors": [
+    "eray cetinay"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "blood",
+    "donor"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular-strap": "^2.3.12",
+    "angular": "^1.6.4",
+    "angular-ui-router": "^1.0.6",   
+    "angular-socket-io": "^0.7.0",
+    "angular-esri-map": "^2.0.4", 
+    "ngMask": "angular-mask#^3.1.1",
+    "angular-sanitize": "^1.6.6"
+  }
+}

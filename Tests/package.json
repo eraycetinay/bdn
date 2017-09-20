@@ -1,0 +1,19 @@
+{
+  "name": "bdntest",
+  "version": "1.0.0",
+  "description": "tests of bdn",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "eray cetinay",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^3.5.3",
+    "should": "^13.0.1",
+    "socket.io-client": "^2.0.3"
+  }
+}

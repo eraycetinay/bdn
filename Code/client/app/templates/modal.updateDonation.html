@@ -1,0 +1,62 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content"> 
+            <form name="updateDonationForm" ng-submit="updateDonation(updateDonationForm)" novalidate>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" ng-model="updateDonor.firstName" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
+                                <span class="text-danger" ng-show="updateDonationForm.firstName.$invalid && updateDonationForm.$submitted">Please enter your first name.</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" ng-model="updateDonor.lastName" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required>
+                                <span class="text-danger" ng-show="updateDonationForm.lastName.$invalid && updateDonationForm.$submitted">Please enter your last name.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="contactNumber">Contact Number</label>
+                                <input type="text" ng-model="updateDonor.contactNumber" class="form-control" name="contactNumber" id="contactNumber" placeholder="Contact Number" required>
+                                <span class="text-danger" ng-show="updateDonationForm.contactNumber.$invalid && updateDonationForm.$submitted">Please enter a contact number.</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" ng-model="updateDonor.email" class="form-control" name="email" id="email" placeholder="Email" required>
+                                <span class="text-danger" ng-show="updateDonationForm.email.$invalid && updateDonationForm.$submitted">Please enter an email.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" ng-model="updateDonor.address" ng-disabled="1" class="form-control" name="address" id="address" placeholder="Address">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="bloodGroup">Blood Group</label>
+                                <select ng-model="updateDonor.bloodGroup" class="form-control" name="bloodGroup" id="bloodGroup" ng-options="option for option in bloodTypes"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+                    <button type="button" ng-click="deleteDonation()" class="btn btn-primary">Delete</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

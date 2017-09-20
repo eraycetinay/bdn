@@ -1,0 +1,30 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content"> 
+            <div class="modal-body">
+                <div class="well">
+                    <b>First Name:</b> {{ showDonor.firstName }}
+                    <br/>
+                    <b>Last Name:</b> {{ showDonor.lastName }}
+                    <br/>
+                    <b>Address:</b> {{ showDonor.address }}
+                    <br/>
+                    <b>Blood Group:</b> {{ showDonor.bloodGroup }}
+                </div>
+                <div class="well" ng-init="showContact=0">
+                    <div ng-if="showContact==1">
+                        <b>Contact Number:</b> <a ng-href="tel:{{ showDonor.contactNumber }}">{{ showDonor.contactNumber }}</a>
+                        <br/>
+                        <b>Email:</b> <a ng-href="mailto:{{ showDonor.contactNumber }}">{{ showDonor.email }}</a>
+                        <br/>
+                    </div>
+                    <div ng-show="showContact==0">
+                        <a href ng-click="showContact=1">Please click here to view contact information</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>

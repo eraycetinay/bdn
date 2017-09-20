@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr" ng-app="bdn">
+
+<head>
+    <base href="/" />
+    <meta name="fragment" content="!">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>(B)lood (D)onation (N)etwork | Blood donors save lives, so donate blood today!</title>
+    <meta name="description" content="Contact with patients all around the world to donate or find blood donors near you.">
+    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.4/esri/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src='/socket.io/socket.io.js'></script> 
+    <script src="assets/bower_components/angular/angular.js"></script>
+    <script src="assets/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="assets/bower_components/angular-strap/dist/angular-strap.js"></script>
+    <script src="assets/bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+    <script src="assets/bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="assets/bower_components/angular-esri-map/dist/angular-esri-map.js"></script>
+    <script src="assets/bower_components/ngMask/dist/ngMask.min.js"></script>
+    <script src="assets/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="assets/bower_components/angular-socket-io/socket.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/components/socket.factory.js"></script>
+    <script src="app/home/home.component.js"></script>
+    <script src="https://js.arcgis.com/4.4/"></script>
+</head>
+
+<body>
+    <div ui-view></div>
+</body>
+
+</html>
