@@ -6,7 +6,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 //Require ends
 
-mongoose.connect('mongodb://localhost/blooddonor', {
+mongoose.connect('mongodb://erayadmin:erayadmin@ds143754.mlab.com:43754/blooddonor', {
   useMongoClient: true
 }); 
  
