@@ -10,7 +10,7 @@ var rootAddress = path.resolve(__dirname);
 mongoose.connect('mongodb://erayadmin:erayadmin@ds143754.mlab.com:43754/blooddonor', {
     useMongoClient: true
 });
-
+ 
 require('./blooddonor/socket.router.js')(io);
   
 app.use(express.static(path.join(path.resolve(__dirname), '/../client')));
