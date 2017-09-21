@@ -20,5 +20,8 @@
     "mongoose": "^4.11.11", 
     "path": "^0.12.7",
     "socket.io": "^2.0.3"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
   }
 }
