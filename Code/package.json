@@ -1,5 +1,5 @@
 {
-  "name": "myblooddonor",
+  "name": "bdn",
   "version": "1.0.0",
   "description": "single page blood donation management system",
   "main": "",
@@ -20,8 +20,5 @@
     "mongoose": "^4.11.11", 
     "path": "^0.12.7",
     "socket.io": "^2.0.3"
-  },
-  "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
   }
 }

@@ -7,7 +7,7 @@ function createMarker(data, socket, clients) {
     data.ip = socket.conn.transport.socket._socket.remoteAddress;
     data.loc = { "type": "Point", "coordinates": data.coordinates };
     model.create(data).then(function(doc) {
-        socket.emit('message', 'Your donation added to the map. You can edit or delete using the link below:<br/><a target="_blank" href="http://protected-brushlands-57401.herokuapp.com/?key=' + doc._id + '">http://protected-brushlands-57401.herokuapp.com/?key=' + doc._id + '</a>');
+        socket.emit('message', 'Your donation added to the map. You can edit or delete using the link below:<br/><a target="_blank" href="http://localhost:1111/?key=' + doc._id + '">http://localhost:1111/?key=' + doc._id + '</a>');
         syncRead(doc.loc, clients);
     }).catch(function(err) {
         socket.emit('message', 'An error occured while creating donation.');
